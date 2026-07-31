@@ -288,18 +288,18 @@ a {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 85%;
-    max-width: 320px;
+    width: 88%;
+    max-width: 340px;
     height: 100vh;
-    background-color: #FFFFFF;
+    background-color: var(--color-primary);
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 6rem 2.25rem 2.5rem 2.25rem;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+    padding: 5rem 2rem 2.5rem 2rem;
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.3);
     transition: right 0.4s var(--transition-smooth);
     z-index: 1050;
-    gap: 1.6rem;
+    gap: 0;
     list-style: none;
     margin: 0;
   }
@@ -313,23 +313,40 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .nav-item a {
-    font-size: 0.95rem;
+    font-size: 0.925rem;
     font-weight: 500;
     white-space: nowrap;
     display: block;
     width: 100%;
     text-align: left;
-    padding: 0.25rem 0;
+    padding: 1.1rem 0;
+    color: #FFFFFF;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-item a:hover,
+  .nav-item.active a {
+    color: var(--color-accent);
   }
 
   .header-cta {
     width: 100%;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     white-space: nowrap;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #FFFFFF;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .header-cta {
+    display: none;
   }
 }
 
@@ -353,6 +370,25 @@ a {
   min-height: auto;
   padding-top: calc(var(--header-height) + 3.5rem);
   padding-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 2.5rem);
+    padding-bottom: 3.5rem;
+  }
+  .subpage-hero {
+    padding-top: calc(var(--header-height) + 1.75rem);
+    padding-bottom: 2rem;
+  }
+  .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.25;
+  }
+  .section-padding {
+    padding: 3.5rem 0;
+  }
 }
 
 .hero-tagline {
