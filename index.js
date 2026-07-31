@@ -36,7 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close menu when a link is clicked
+    // Close menu when close button or a link is clicked
+    const menuCloseBtn = document.getElementById('mobile-menu-close');
+    if (menuCloseBtn) {
+      menuCloseBtn.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        const spans = navToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      });
+    }
+
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
