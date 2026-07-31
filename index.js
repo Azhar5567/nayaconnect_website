@@ -118,14 +118,21 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.textContent = 'Transmitting Confidential Inquiry...';
 
     const formData = new FormData(form);
-    formData.append('access_key', WEB3FORMS_KEY);
-    formData.append('from_name', 'NayaConnect Executive Search Website');
-    formData.append('subject', 'New Executive Search Mandate Inquiry - NayaConnect');
+    formData.set('access_key', WEB3FORMS_KEY.trim());
+    formData.set('from_name', 'NayaConnect Executive Search Website');
+    formData.set('subject', 'New Executive Search Mandate Inquiry - NayaConnect');
+
+    const object = Object.fromEntries(formData);
+    const jsonPayload = JSON.stringify(object);
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: jsonPayload
       });
       const data = await response.json();
       
