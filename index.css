@@ -17,8 +17,8 @@ a {
 
 :root {
   --color-primary: #0B1F3A;
-  --color-accent: #C19747;
-  --color-accent-hover: #A77A2F;
+  --color-accent: #A77A2F;
+  --color-accent-hover: #8D6423;
   --color-bg: #FFFFFF;
   --color-text: #1C1C1C;
   --color-text-muted: #555555;
@@ -32,11 +32,10 @@ a {
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.75rem;
-  --spacing-lg: 3.5rem;
-  --spacing-xl: 5rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5.5rem;
+  --spacing-xxl: 8rem;
   
-  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   --max-width: 1200px;
   --header-height: 80px;
   --header-height-scrolled: 70px;
@@ -282,7 +281,7 @@ a {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1200;
+  z-index: 1100;
 }
 
 .nav-toggle span {
@@ -294,8 +293,8 @@ a {
   transition: all 0.3s var(--transition-smooth);
 }
 
-.nav-toggle.active span {
-  background-color: var(--color-accent);
+.mobile-menu-close {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -325,6 +324,21 @@ a {
   
   .nav-menu.active {
     right: 0;
+  }
+
+  .mobile-menu-close {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-size: 2.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.5rem;
+    z-index: 1100;
   }
 
   .nav-item {
@@ -1072,12 +1086,4 @@ textarea.form-control {
 
 .modal-close-btn:hover {
   color: var(--color-accent);
-}
-
-/* Utilities */
-.text-center {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
