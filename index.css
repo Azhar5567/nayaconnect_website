@@ -293,6 +293,10 @@ a {
   transition: all 0.3s var(--transition-smooth);
 }
 
+.mobile-menu-close {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .nav-toggle {
     display: block;
@@ -323,6 +327,7 @@ a {
   }
 
   .mobile-menu-close {
+    display: block;
     position: absolute;
     top: 1.25rem;
     right: 1.5rem;
