@@ -700,6 +700,22 @@ textarea.form-control {
   margin-top: 1.25rem;
 }
 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 580px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .modal-drawer {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
