@@ -239,4 +239,91 @@ document.addEventListener('DOMContentLoaded', () => {
       handleFormSubmit(modalForm, successHtml);
     });
   }
+
+  // --- Insight Article Reader Drawer ---
+  const ARTICLES_DATA = {
+    1: {
+      category: "Talent Report • July 2026",
+      title: "The Next Era of Wealth Management Leadership",
+      content: `
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> The global wealth management sector is undergoing a structural shift driven by an estimated $84 trillion intergenerational wealth transfer and rapid digitization of advisory services.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Dual-Competency Leadership</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Traditional relationship-only wealth managers are being superseded by leaders who combine private banking pedigree with digital portfolio intelligence capabilities.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Next-Gen Client Retention</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Next-generation heirs demand ESG-aligned investment strategies, alternative assets (Private Equity, Venture Capital), and instant mobile portal access.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Strategic Sourcing Imperative</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Institutions must actively recruit leaders capable of scaling multi-family office platforms while maintaining ultra-high-net-worth client trust.</p>
+      `
+    },
+    2: {
+      category: "Governance • June 2026",
+      title: "Risk and Regulation in FinTech Scale-Ups",
+      content: `
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> As digital banking and neo-lending platforms achieve institutional scale, regulatory scrutiny from financial authorities across India, GCC, and global jurisdictions has intensified.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. The Evolving CRO Mandate</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">FinTech Chief Risk Officers (CROs) must bridge the gap between high-velocity engineering and rigorous compliance, AML, and credit risk governance.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Regulatory Technology & Reporting</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Modern compliance leaders are required to implement automated transaction monitoring and real-time regulatory reporting frameworks.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Board Oversight Requirements</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Investors and regulators require FinTech boards to maintain independent risk committees with veteran banking compliance expertise.</p>
+      `
+    },
+    3: {
+      category: "Board Advisory • May 2026",
+      title: "Board Composition in the Era of AI & Automation",
+      content: `
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> Artificial Intelligence and algorithmic decision-making have shifted from operational tools to strategic board-level governance priorities across banking and capital markets.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Algorithmic Risk Oversight</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Boards require Independent Directors capable of evaluating credit scoring algorithms, fraud detection models, and data privacy safeguards.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Technology & Cyber Expertise</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Tier-1 financial institutions are actively recruiting former CTOs, CISOs, and Tech Founders into Non-Executive Director roles.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Governance & Ethics Frameworks</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Establishing clear ethical AI boundaries and model risk management guidelines is now mandatory for board audit and risk committees.</p>
+      `
+    }
+  };
+
+  const articleTriggers = document.querySelectorAll('[data-read-article]');
+  articleTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const articleId = trigger.getAttribute('data-read-article');
+      const articleData = ARTICLES_DATA[articleId];
+      if (!articleData) return;
+
+      const modalDrawer = document.getElementById('modal-drawer');
+      const modalOverlay = document.getElementById('modal-overlay');
+      
+      if (modalDrawer && modalOverlay) {
+        modalDrawer.innerHTML = `
+          <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+          <span class="section-label">${articleData.category}</span>
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.25rem; color: var(--color-primary); line-height: 1.3;">${articleData.title}</h3>
+          
+          <div class="article-body">
+            ${articleData.content}
+          </div>
+          
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+            <button class="btn btn-primary" id="article-cta-btn" style="width: 100%; border: none;">Discuss Search Mandate In This Area &rarr;</button>
+          </div>
+        `;
+
+        modalOverlay.classList.add('active');
+        modalDrawer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        const closeBtn = document.getElementById('modal-close-btn');
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+        const articleCtaBtn = document.getElementById('article-cta-btn');
+        if (articleCtaBtn) {
+          articleCtaBtn.addEventListener('click', () => {
+            // Restore default inquiry form
+            window.location.href = "contact.html";
+          });
+        }
+      }
+    });
+  });
 });
