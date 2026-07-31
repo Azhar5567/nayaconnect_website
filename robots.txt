@@ -1,0 +1,6 @@
+# Robots.txt for NayaConnect Executive Search
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.nayaconnect.com/sitemap.xml
