@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formData = new FormData(form);
     formData.set('access_key', WEB3FORMS_KEY.trim());
-    formData.set('from_name', 'NayaConnect Executive Search Website');
-    formData.set('subject', 'New Executive Search Mandate Inquiry - NayaConnect');
+    formData.set('from_name', 'NayaConnect Fintech Recruitment Website');
+    formData.set('subject', 'New FinTech Recruitment Inquiry - NayaConnect');
 
     const object = Object.fromEntries(formData);
     const jsonPayload = JSON.stringify(object);
