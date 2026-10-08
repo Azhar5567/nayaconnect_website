@@ -262,42 +262,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Insight Article Reader Drawer ---
   const ARTICLES_DATA = {
     1: {
-      category: "Talent Report • July 2026",
-      title: "The Next Era of Wealth Management Leadership",
+      category: "Leadership Report • October 2026",
+      title: "FinTech Leadership in 2026: Scale, Unit Economics & Regulatory Scrutiny",
       content: `
-        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> The global wealth management sector is undergoing a structural shift driven by an estimated $84 trillion intergenerational wealth transfer and rapid digitization of advisory services.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Dual-Competency Leadership</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Traditional relationship-only wealth managers are being superseded by leaders who combine private banking pedigree with digital portfolio intelligence capabilities.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Next-Gen Client Retention</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Next-generation heirs demand ESG-aligned investment strategies, alternative assets (Private Equity, Venture Capital), and instant mobile portal access.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Strategic Sourcing Imperative</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Institutions must actively recruit leaders capable of scaling multi-family office platforms while maintaining ultra-high-net-worth client trust.</p>
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> The era of 'growth-at-all-costs' in FinTech has definitively ended. Venture investors, public markets, and central bank regulators now demand sustainable unit economics, compliance-first architecture, and seasoned executive governance.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. The Capital-Efficient Founder & CEO</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">FinTech CEOs are transitioning from rapid customer acquisition metrics to gross margin health, contribution profit per transaction, and regulatory capital adequacy.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Institutionalizing the C-Suite</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Scaleups crossing Series B and C stages are aggressively recruiting seasoned CFOs and COOs from tier-1 banking institutions who bring rigorous audit, treasury, and capital markets experience.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Strategic Talent Pipeline</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Winning FinTechs build leadership redundancy early, securing specialized leaders across tech, product, and risk before regulatory scrutiny intensifies.</p>
       `
     },
     2: {
-      category: "Governance • June 2026",
-      title: "Risk and Regulation in FinTech Scale-Ups",
+      category: "Talent Strategy • September 2026",
+      title: "Building High-Performance Engineering & Product Teams in Digital Finance",
       content: `
-        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> As digital banking and neo-lending platforms achieve institutional scale, regulatory scrutiny from financial authorities across India, GCC, and global jurisdictions has intensified.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. The Evolving CRO Mandate</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">FinTech Chief Risk Officers (CROs) must bridge the gap between high-velocity engineering and rigorous compliance, AML, and credit risk governance.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Regulatory Technology & Reporting</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Modern compliance leaders are required to implement automated transaction monitoring and real-time regulatory reporting frameworks.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Board Oversight Requirements</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Investors and regulators require FinTech boards to maintain independent risk committees with veteran banking compliance expertise.</p>
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> Financial technology architectures require zero-downtime reliability, millisecond latency, and bank-grade data security. Sourcing engineering and product executives who understand both code and financial plumbing is the defining competitive advantage.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Bridging Tech Agility with Banking Protocols</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">The most effective FinTech CTOs understand ISO 20022 messaging, core banking APIs, and payment ledger idempotency while maintaining modern DevOps speed.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Outcome-Driven Product Leadership</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Chief Product Officers in FinTech must balance user conversion optimization with mandatory KYC frictions, multi-factor authentication, and fraud prevention controls.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Specialized Tech Hiring Imperative</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Leading firms map cross-border engineering talent in hubs like Bengaluru, Dubai, and Singapore to recruit specialized ledger, risk engine, and security architects.</p>
       `
     },
     3: {
-      category: "Board Advisory • May 2026",
-      title: "Board Composition in the Era of AI & Automation",
+      category: "Risk & Governance • August 2026",
+      title: "The Modern Chief Risk Officer in FinTech: Innovation vs. Governance",
       content: `
-        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> Artificial Intelligence and algorithmic decision-making have shifted from operational tools to strategic board-level governance priorities across banking and capital markets.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Algorithmic Risk Oversight</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Boards require Independent Directors capable of evaluating credit scoring algorithms, fraud detection models, and data privacy safeguards.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Technology & Cyber Expertise</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Tier-1 financial institutions are actively recruiting former CTOs, CISOs, and Tech Founders into Non-Executive Director roles.</p>
-        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Governance & Ethics Frameworks</h4>
-        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">Establishing clear ethical AI boundaries and model risk management guidelines is now mandatory for board audit and risk committees.</p>
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> As central banks across India (RBI), UAE (CBUAE), and global markets establish dedicated digital lending and payment frameworks, the FinTech CRO has evolved into a strategic board-level pillar.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Proactive Regulatory Navigation</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Modern CROs actively engage with regulatory sandboxes and supervisory bodies, ensuring product launches comply with cross-border data residency and AML norms.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Algorithmic & AI Credit Risk Oversight</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">With machine learning powering underwriting and fraud detection, risk leaders must audit model bias, explainability, and systemic delinquency risk.</p>
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">3. Executive Profile of the Modern CRO</h4>
+        <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1.5rem;">FinTech boards are increasingly prioritizing risk executives who combine regulatory legal standing with commercial empathy for rapid product iterations.</p>
       `
     }
   };
