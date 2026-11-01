@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "Risk & Governance • August 2026",
       title: "The Modern Chief Risk Officer in FinTech: Innovation vs. Governance",
       content: `
-        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> As central banks across India (RBI), UAE (CBUAE), and global markets establish dedicated digital lending and payment frameworks, the FinTech CRO has evolved into a strategic board-level pillar.</p>
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--color-text-muted); margin-bottom: 1.25rem;"><strong>Executive Summary:</strong> As financial regulators and central banks establish dedicated digital lending and payment frameworks, the FinTech CRO has evolved into a strategic board-level pillar.</p>
         <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">1. Proactive Regulatory Navigation</h4>
         <p style="font-size: 0.9rem; line-height: 1.65; color: var(--color-text-muted); margin-bottom: 1rem;">Modern CROs actively engage with regulatory sandboxes and supervisory bodies, ensuring product launches comply with cross-border data residency and AML norms.</p>
         <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--color-primary); font-size: 1.1rem;">2. Algorithmic & AI Credit Risk Oversight</h4>
