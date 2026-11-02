@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Transmitting Confidential Inquiry...';
 
+    // Ensure tracking fields are attached and refreshed before FormData capture
+    if (window.NTC_Tracker && typeof window.NTC_Tracker.attachToForms === 'function') {
+      window.NTC_Tracker.attachToForms();
+    }
+
     const formData = new FormData(form);
     formData.set('access_key', WEB3FORMS_KEY.trim());
     formData.set('from_name', 'NayaConnect Fintech Recruitment Website');
@@ -137,6 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
       
       if (data.success) {
+        // Track successful lead conversion (Google, Meta, LinkedIn, dataLayer)
+        if (window.NTC_Tracker && typeof window.NTC_Tracker.trackLeadSubmission === 'function') {
+          window.NTC_Tracker.trackLeadSubmission(form, object);
+        }
         form.innerHTML = successHtml;
       } else {
         alert(data.message || 'Transmission error. Please email hrsolutions@nayaconnect.com directly.');
