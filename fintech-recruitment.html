@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fintech Recruitment & Executive Search | NayaConnect</title>
+  <meta name="description" content="NayaConnect is a specialist recruitment consultancy focused exclusively on FinTech. We help fintech companies identify and hire exceptional professionals without the bottlenecks.">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Fintech Recruitment & Executive Search | NayaConnect">
+  <meta property="og:description" content="The Right Fintech Talent. Without the Hiring Bottlenecks. Specialist recruitment for FinTech founders, CTOs, CHROs, and hiring leaders.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExecutiveSearch",
+    "name": "NayaConnect",
+    "legalName": "Naya Connect Com",
+    "url": "https://www.nayaconnect.com/fintech-recruitment",
+    "logo": "https://www.nayaconnect.com/assets/logo.png",
+    "foundingDate": "2016",
+    "founder": {
+      "@type": "Person",
+      "name": "Azhar Khan",
+      "jobTitle": "Managing Partner"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Orchid Apartment, Sukhlaji Street",
+      "addressLocality": "Mumbai",
+      "postalCode": "400008",
+      "addressCountry": "IN"
+    },
+    "email": "hrsolutions@nayaconnect.com",
+    "description": "Specialist recruitment consultancy focused exclusively on the FinTech sector."
+  }
+  </script>
+
+  <link rel="canonical" href="https://www.nayaconnect.com/fintech-recruitment">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <style>
+    /* Landing Page Specific Minimalist Polish */
+    .landing-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-height);
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      transition: height 0.3s var(--transition-smooth), border-color 0.3s;
+    }
+
+    .landing-header.scrolled {
+      height: var(--header-height-scrolled);
+      border-color: #E2E8F0;
+      box-shadow: 0 4px 20px rgba(11, 31, 58, 0.04);
+    }
+
+    .landing-nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .landing-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: 5rem;
+      background: radial-gradient(circle at 90% 15%, rgba(193, 151, 71, 0.05) 0%, rgba(255, 255, 255, 0) 60%), #FFFFFF;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .landing-hero-content {
+      max-width: 860px;
+    }
+
+    .landing-hero-headline {
+      font-size: clamp(2.35rem, 4.2vw, 3.75rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--color-primary);
+      margin-top: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .landing-hero-sub {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      font-weight: 300;
+      max-width: 720px;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .badge-bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .badge-bar-num {
+      font-family: var(--font-headings);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .badge-bar-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-subtle);
+    }
+
+    /* Section Styling */
+    .landing-section {
+      padding: 5.5rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .landing-section.alt-bg {
+      background-color: #FAFAFB;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-intro h2 {
+      font-size: clamp(1.85rem, 2.8vw, 2.45rem);
+      letter-spacing: -0.02em;
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro p {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* 2. Expertise Grid */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.25rem;
+    }
+
+    .expertise-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 2.25rem;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .expertise-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+
+    .expertise-num {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .expertise-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    .expertise-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .expertise-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .role-pill {
+      font-size: 0.75rem;
+      color: var(--color-primary);
+      background-color: #F8F9FA;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid #ECEEF1;
+      letter-spacing: 0.02em;
+    }
+
+    /* 3. Who We Serve */
+    .serve-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.25rem;
+    }
+
+    .serve-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 2.25rem;
+      position: relative;
+    }
+
+    .serve-card h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .serve-card p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .serve-spec {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* 4. Why Nayaconnect */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .why-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .pillar-item {
+      border-left: 2px solid var(--color-accent);
+      padding-left: 1.5rem;
+    }
+
+    .pillar-title {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* 5. Contact / Enquiry Form */
+    .enquiry-container {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 4.5rem;
+      align-items: start;
+    }
+
+    .enquiry-info h2 {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .enquiry-info p {
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+
+    .enquiry-commitments {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .enquiry-commitments li {
+      font-size: 0.9rem;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .enquiry-commitments li::before {
+      content: '✓';
+      color: var(--color-accent);
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .enquiry-form-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(11, 31, 58, 0.03);
+    }
+
+    .landing-footer {
+      padding: 3rem 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .landing-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--color-text-subtle);
+    }
+
+    .landing-footer a {
+      color: var(--color-text-subtle);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .landing-footer a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .expertise-grid,
+      .serve-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .why-grid,
+      .enquiry-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .why-pillars {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .expertise-grid,
+      .serve-grid {
+        grid-template-columns: 1fr;
+      }
+      .landing-hero {
+        padding-top: calc(var(--header-height) + 2rem);
+        padding-bottom: 3.5rem;
+      }
+      .enquiry-form-card {
+        padding: 2rem 1.5rem;
+      }
+      .badge-bar {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header: Logo and One CTA -->
+  <header class="landing-header" id="header">
+    <div class="container landing-nav-container">
+      <a href="index.html" class="logo-link" id="nav-logo-link" aria-label="NayaConnect Home">
+        <img src="assets/logo.png" alt="NayaConnect - Fintech Recruitment" class="logo-img">
+      </a>
+      <a href="#enquiry" class="btn btn-primary" id="header-cta-btn">DISCUSS YOUR HIRING NEEDS</a>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="landing-hero" id="hero">
+    <div class="container">
+      <div class="landing-hero-content fade-in-up">
+        <span class="section-label">FinTech Recruitment Boutique</span>
+        <h1 class="landing-hero-headline">The Right Fintech Talent. Without the Hiring Bottlenecks.</h1>
+        <p class="landing-hero-sub">We help fintech companies identify and hire exceptional professionals.</p>
+        <div>
+          <a href="#enquiry" class="btn btn-primary" style="padding: 1rem 2.25rem;">DISCUSS YOUR HIRING NEEDS</a>
+        </div>
+
+        <div class="badge-bar">
+          <div class="badge-bar-item">
+            <span class="badge-bar-num">100%</span>
+            <span class="badge-bar-label">FinTech Focused</span>
+          </div>
+          <div class="badge-bar-item">
+            <span class="badge-bar-num">2016</span>
+            <span class="badge-bar-label">Founded</span>
+          </div>
+          <div class="badge-bar-item">
+            <span class="badge-bar-num">Direct</span>
+            <span class="badge-bar-label">Partner Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Show Our Expertise -->
+  <section class="landing-section" id="expertise">
+    <div class="container">
+      <div class="section-intro fade-in-up">
+        <span class="section-label">Core Capabilities</span>
+        <h2>Show Our Expertise</h2>
+        <p>Specialized technical and leadership recruitment across the financial technology stack.</p>
+      </div>
+
+      <div class="expertise-grid fade-in-up delay-1">
+        <!-- 1 -->
+        <div class="expertise-card">
+          <span class="expertise-num">01 / Engineering</span>
+          <h3 class="expertise-title">Software Engineering & Development</h3>
+          <p class="expertise-desc">Backend, frontend, and full-stack software engineers building high-throughput financial transaction engines and distributed architectures.</p>
+          <div class="expertise-roles">
+            <span class="role-pill">Core Backend</span>
+            <span class="role-pill">Frontend / Mobile</span>
+            <span class="role-pill">Full-Stack</span>
+            <span class="role-pill">System Architects</span>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="expertise-card">
+          <span class="expertise-num">02 / Infrastructure</span>
+          <h3 class="expertise-title">Cloud Infrastructure & DevOps</h3>
+          <p class="expertise-desc">Cloud architects, SREs, and DevOps engineers constructing secure, PCI-DSS compliant, zero-downtime financial platforms.</p>
+          <div class="expertise-roles">
+            <span class="role-pill">Cloud Architects</span>
+            <span class="role-pill">DevOps & SRE</span>
+            <span class="role-pill">InfoSec / CISO</span>
+            <span class="role-pill">Platform Engineering</span>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="expertise-card">
+          <span class="expertise-num">03 / Data & AI</span>
+          <h3 class="expertise-title">Data Engineering & Artificial Intelligence</h3>
+          <p class="expertise-desc">Data architects, quantitative analysts, and ML engineers developing real-time fraud detection and algorithmic credit engines.</p>
+          <div class="expertise-roles">
+            <span class="role-pill">Data Engineers</span>
+            <span class="role-pill">ML / AI Scientists</span>
+            <span class="role-pill">Risk Modelers</span>
+            <span class="role-pill">Data Architects</span>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="expertise-card">
+          <span class="expertise-num">04 / Payments</span>
+          <h3 class="expertise-title">Payments Technology</h3>
+          <p class="expertise-desc">Specialists in payment gateway integration, transaction switches, POS terminals, cross-border remittances, and card issuance.</p>
+          <div class="expertise-roles">
+            <span class="role-pill">Switch Engineers</span>
+            <span class="role-pill">Gateway Architects</span>
+            <span class="role-pill">Settlement Ops</span>
+            <span class="role-pill">Remittance Leads</span>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="expertise-card">
+          <span class="expertise-num">05 / Banking Rails</span>
+          <h3 class="expertise-title">Digital Banking Technology</h3>
+          <p class="expertise-desc">Core banking software engineers, open API banking developers, and mobile platform leads for neobanks and embedded finance.</p>
+          <div class="expertise-roles">
+            <span class="role-pill">Core Banking SaaS</span>
+            <span class="role-pill">API Banking</span>
+            <span class="role-pill">Mobile Banking</span>
+            <span class="role-pill">Embedded Finance</span>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="expertise-card">
+          <span class="expertise-num">06 / Leadership</span>
+          <h3 class="expertise-title">Product & Engineering Leadership</h3>
+          <p class="expertise-desc">Chief Technology Officers, VPs of Engineering, and Heads of Product who unite engineering velocity with commercial insight.</p>
+          <div class="expertise-roles">
+            <span class="role-pill">CTO</span>
+            <span class="role-pill">VP Engineering</span>
+            <span class="role-pill">Chief Product Officer</span>
+            <span class="role-pill">Head of Technology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Who We Serve -->
+  <section class="landing-section alt-bg" id="who-we-serve">
+    <div class="container">
+      <div class="section-intro fade-in-up">
+        <span class="section-label">FinTech Verticals</span>
+        <h2>Who We Serve</h2>
+        <p>Tailored recruitment partnerships for organizations operating across the digital finance landscape.</p>
+      </div>
+
+      <div class="serve-grid fade-in-up delay-1">
+        <!-- 1 -->
+        <div class="serve-card">
+          <span class="serve-spec">Vertical 01</span>
+          <h3 style="margin-top: 0.5rem;">Payments & Digital Commerce</h3>
+          <p>Payment gateways, acquiring networks, digital wallets, cross-border remittance providers, and POS infrastructure innovators.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="serve-card">
+          <span class="serve-spec">Vertical 02</span>
+          <h3 style="margin-top: 0.5rem;">Neobanking & Digital Banking</h3>
+          <p>Digital-first consumer and commercial banks, core banking software providers, and embedded finance platforms.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="serve-card">
+          <span class="serve-spec">Vertical 03</span>
+          <h3 style="margin-top: 0.5rem;">LendingTech & Digital Credit</h3>
+          <p>Consumer lending apps, MSME credit platforms, Buy-Now-Pay-Later (BNPL) firms, and algorithmic underwriting platforms.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="serve-card">
+          <span class="serve-spec">Vertical 04</span>
+          <h3 style="margin-top: 0.5rem;">WealthTech & Investment</h3>
+          <p>Discount brokerages, algorithmic trading systems, robo-advisories, personal finance managers, and digital asset portals.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="serve-card">
+          <span class="serve-spec">Vertical 05</span>
+          <h3 style="margin-top: 0.5rem;">InsurTech & Digital Insurance</h3>
+          <p>Digital insurance brokers, parametric underwriting platforms, automated claims tech, and embedded coverage solutions.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="serve-card">
+          <span class="serve-spec">Vertical 06</span>
+          <h3 style="margin-top: 0.5rem;">RegTech & Compliance Tech</h3>
+          <p>Automated KYC and AML compliance SaaS, real-time transaction monitoring systems, and financial crime prevention tech.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Why Nayaconnect -->
+  <section class="landing-section" id="why-nayaconnect">
+    <div class="container">
+      <div class="why-grid fade-in-up">
+        <div>
+          <span class="section-label">The Boutique Advantage</span>
+          <h2 style="font-size: clamp(2rem, 3.2vw, 2.75rem); letter-spacing: -0.02em; margin-top: 0.5rem; margin-bottom: 1.25rem;">Why NayaConnect</h2>
+          <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem;">
+            NayaConnect is a specialist recruitment boutique focused exclusively on the fintech sector. We combine deep domain expertise, proactive talent sourcing, and a partnership-led delivery model to solve critical technical hiring mandates without friction.
+          </p>
+          <a href="#enquiry" class="btn btn-outline" style="border-color: var(--color-primary);">INITIATE SEARCH</a>
+        </div>
+
+        <div class="why-pillars">
+          <!-- Pillar 1 -->
+          <div class="pillar-item">
+            <h3 class="pillar-title">Specialist FinTech Expertise</h3>
+            <p class="pillar-desc">We operate 100% within the financial technology ecosystem. We understand ledger idempotency, PCI compliance, and regulatory nuances, ensuring zero time wasted on misaligned candidates.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-item">
+            <h3 class="pillar-title">Targeted Talent Sourcing</h3>
+            <p class="pillar-desc">Rather than relying on passive job board postings, our dedicated research team maps active and passive high-calibre technologists directly across peer fintech scaleups.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-item">
+            <h3 class="pillar-title">Partnership-Led Approach</h3>
+            <p class="pillar-desc">Every mandate is led directly by senior partners. We act as an extension of your leadership team, representing your brand and technology vision with complete discretion.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-item">
+            <h3 class="pillar-title">Vetted Technical Accuracy</h3>
+            <p class="pillar-desc">Candidates are rigorously screened for architectural depth, production-scale experience, and cognitive adaptability before shortlist presentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Contact / Enquiry Form -->
+  <section class="landing-section alt-bg" id="enquiry">
+    <div class="container">
+      <div class="enquiry-container fade-in-up">
+        <!-- Left details -->
+        <div class="enquiry-info">
+          <span class="section-label">Initiate Discussion</span>
+          <h2>Let's build your FinTech team.</h2>
+          <p>Connect directly with our partners to discuss your technology, product, or leadership hiring mandates.</p>
+          
+          <ul class="enquiry-commitments">
+            <li>Strict non-disclosure & confidentiality</li>
+            <li>Guaranteed response within 1 business day</li>
+            <li>Direct partner-level engagement</li>
+          </ul>
+
+          <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-subtle); display: block; margin-bottom: 0.5rem;">Direct Partner Email</span>
+            <a href="mailto:hrsolutions@nayaconnect.com" style="color: var(--color-primary); font-weight: 500; text-decoration: none; font-size: 1.05rem;">hrsolutions@nayaconnect.com</a>
+          </div>
+        </div>
+
+        <!-- Form Right -->
+        <div class="enquiry-form-card">
+          <form class="contact-form" id="hiring-inquiry-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="19dd0956-8628-49d9-a33f-326ea72711dc">
+            <input type="hidden" name="page" value="fintech-recruitment-landing-page">
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+              <div class="form-group">
+                <label for="org" class="form-label">Company Name</label>
+                <input type="text" id="org" name="org" class="form-control" placeholder="e.g. Apex Payments" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label">Business Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="sarah@apexpayments.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Contact Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sector" class="form-label">FinTech Vertical</label>
+                <select id="sector" name="sector" class="form-control" required>
+                  <option value="" disabled selected>Select FinTech vertical...</option>
+                  <option value="payments">Payments &amp; Digital Commerce</option>
+                  <option value="neobanking">Neobanking &amp; Digital Banking</option>
+                  <option value="lendingtech">LendingTech &amp; Digital Credit</option>
+                  <option value="wealthtech">WealthTech &amp; Investment</option>
+                  <option value="insurtech">InsurTech</option>
+                  <option value="regtech">RegTech &amp; Compliance</option>
+                  <option value="other">Other FinTech / SaaS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="timeline" class="form-label">Expected Hiring Timeline</label>
+                <select id="timeline" name="timeline" class="form-control" required>
+                  <option value="" disabled selected>Select hiring timeline...</option>
+                  <option value="immediate">Immediate (Next 30 days)</option>
+                  <option value="1-3-months">1 to 3 months</option>
+                  <option value="3-6-months">3 to 6 months</option>
+                  <option value="planning">Exploratory / Talent Pipeline</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Hiring Requirements</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Describe the role, technology stack, seniority level, or hiring mandate..." rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; border: none; padding: 1.1rem 1.8rem;">DISCUSS YOUR HIRING NEEDS</button>
+            <p class="privacy-notice">&bull; All communications and requirement details are strictly confidential.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Landing Page Footer -->
+  <footer class="landing-footer">
+    <div class="container landing-footer-inner">
+      <div>
+        <span style="font-weight: 600; color: var(--color-primary); letter-spacing: 0.05em;">NayaConnect</span> &bull; Fintech Recruitment &bull; Founded 2016
+      </div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="index.html">Main Website</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="discretion-statement.html">Discretion Statement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
